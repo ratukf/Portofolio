@@ -1,0 +1,227 @@
+/*-------------------------------------- FONT IMPORT --------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&family=Quicksand:wght@300;400&display=swap');
+/*-------------------------------------- ALL --------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------------------- MAINCONTENT --------------------------------------*/
+
+.mainpage {
+    display: inline;
+}
+
+.leftimage img {
+    height: 100vh;
+    width: 270px;
+    object-fit: cover;
+    position: fixed;
+    z-index: 1;
+}
+
+.mainpage .rightcontent {
+    position: absolute;
+    left: 270px;
+    top: 100px;
+    right: 0;
+    display: block;
+}
+
+.uppercontent {
+    font-family: 'Merriweather', serif;
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.uppercontent h1 {
+    width: 100px;
+    font-size: 40px;
+    text-align: end;
+}
+
+#gallery {
+   line-height:0;
+   -webkit-column-count:3; 
+   -webkit-column-gap:5px;
+   -moz-column-count:5;
+   -moz-column-gap:5px;
+   column-count:3;
+   column-gap:5px;
+   position: absolute;
+   top: 120px;
+   padding: 20px;
+}
+
+#gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 5px;
+ }
+
+
+
+/*-------------------------------------- NAVBAR --------------------------------------*/
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 2;
+}
+
+
+nav h2 {
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Merriweather', serif;
+    color: whitesmoke;
+    margin: 0 10px;
+    font-size: 25px;
+    position: fixed;
+}
+
+.bvrningmoon a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-decoration-line: none;
+    cursor: pointer;
+    transition: .3s;
+    text-shadow: 2px 2px 5px black;
+    position: fixed;
+}
+
+.bvrningmoon a:hover {
+    text-decoration: none;
+    opacity: 60%;
+    text-decoration-line: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+}
+
+nav ul li {
+    font-family: 'Quicksand', sans-serif;
+    display: inline-block;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+nav ul li a:link {
+    text-decoration: none;
+    color: black;
+
+}
+nav ul li a:hover {
+    color: #aba6a1;
+    transition: .3s;
+}
+
+#getyours {
+    color: black;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/*-------------------------------------- FOR MOBILE --------------------------------------*/
+@media only screen and (max-width: 850px){
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        padding: 0;
+        z-index: 4;
+        position: fixed;
+    }
+
+    nav h2 {
+        margin: 30px 30px;
+    }
+
+    nav ul {
+        width: 40%;
+        height: 100vh;
+        justify-content: center;
+        background-color: #2f2e2c;
+        margin-right: -1080px;
+        transition: .5s ease;
+        z-index: 5;
+    }
+    nav ul li {
+        margin: 30px auto;
+        display: block;
+        color: whitesmoke;
+    }
+
+    nav ul li a:link {
+        color: whitesmoke;
+    }
+
+    .navbar .menu-btn {
+        position: absolute;
+        top: 35px;
+        right: 30px;
+        width: 40px;
+        cursor: pointer; 
+        z-index: 6;
+    }
+
+    .mobile-menu {
+        margin-right: 0px;
+    }
+
+    #gallery {
+        line-height:0;
+        -webkit-column-count:1; 
+        -webkit-column-gap:5px;
+        -moz-column-count:1;
+        -moz-column-gap:5px;
+        column-count:1;
+        column-gap:5px;
+        position: absolute;
+        top: 120px;
+        padding: 20px;
+    }
+
+    .mainpage {
+        translate: -300px, 0px;
+    }
+
+    .leftimage {
+        visibility: hidden;
+    }
+
+
+}
+
